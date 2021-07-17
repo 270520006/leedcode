@@ -1,4 +1,4 @@
-package sec;
+package 第2题_两数相加;
 
 public class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

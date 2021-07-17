@@ -1,4 +1,4 @@
-package first;
+package 第1题_两数字之和.first;
 
 import java.util.HashMap;
 
