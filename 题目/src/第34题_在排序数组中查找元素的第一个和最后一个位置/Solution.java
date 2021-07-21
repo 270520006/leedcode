@@ -23,6 +23,7 @@ class Solution {
         firstPosition=firstPosition(nums,target);
         lastPosition=lastPosition(nums,target);
         if (firstPosition==-1){
+            //这里只判断左边界，是因为只要有一个边界值即可，左右端点一样也没事
             return index;
         }
 
@@ -68,8 +69,8 @@ class Solution {
             }
 
         }
-        if(nums[left]==target){return left;}
-        return -1;
+        if(nums[left]==target){return left;} //保证有值
+        return -1;//没有值就返回-1
     }
 
 
