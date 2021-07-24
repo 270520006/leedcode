@@ -15,7 +15,7 @@ class Solution {
                 //这里是为了防止出现abba这种字符串的情况
                 //如果left为left,map.get(s.charAt(i)
                 //则一开始left指向a,后面指向第二个b，然后遇到第二个a
-                //会重新再指向ab的b，循环就出不去了
+                //会重新再指向ab的b，那么就出现了abb这样错误的字符串
                 //所以要保证指针永远不后退
                 left = Math.max(left,map.get(s.charAt(i)) + 1);
             }

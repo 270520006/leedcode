@@ -1,34 +1,27 @@
-package 第83题_删除排序链表中的重复元素;
-
-//存在一个按升序排列的链表，给你这个链表的头节点 head ，
-//        请你删除链表中所有存在数字重复情况的节点，只保留原始链表中 没有重复出现 的数字。
-//        返回同样按升序排列的结果链表。
-//        输入：head = [1,2,3,3,4,4,5]
-//        输出：[1,2,5]
-//        输入：head = [1,1,1,2,3]
-//        输出：[2,3]
-
+package 第82题_删除排序链表中的重复元素_未解出;
+/*
+        存在一个按升序排列的链表，给你这个链表的头节点 head ，
+        请你删除链表中所有存在数字重复情况的节点，只保留原始链表中没有重复出现的数字。
+        返回同样按升序排列的结果链表。
+输入：head = [1,2,3,3,4,4,5]
+输出：[1,2,5]
+输入：head = [1,1,1,2,3]
+输出：[2,3]
+*/
 public class Solution {
     public ListNode deleteDuplicates(ListNode head) {
         int t=0;
         ListNode curr=head;
         if (head==null)return head;
         while(curr.next!=null){
-            System.out.println(t);
             t=curr.val;
-            while(t==curr.next.val){
-                if (curr.next.next!=null)
-                {
-                    curr.next=curr.next.next;
-                }else
-                {
-                    curr.next=null;
-                    break;
-                }
+            if (t==curr.next.val){
+                head=head.next;
             }
             curr=curr.next;
             if (curr==null)break;
         }
+
         return head;
     }
 

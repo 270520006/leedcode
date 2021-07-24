@@ -1,4 +1,4 @@
-package 第82题_删除排序链表中的重复元素;
+package 第19题_删除链表的倒数第N个结点;
 
 public class ListNode {
      int val;
