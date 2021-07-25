@@ -13,7 +13,7 @@ import java.util.Arrays;
         输入: s1= "ab" s2 = "eidboaoo"
         输出: False
  */
-//
+//滑动窗口解决，已完成
 public class Solution {
     public boolean checkInclusion(String s1, String s2) {
         int len1 = s1.length();
