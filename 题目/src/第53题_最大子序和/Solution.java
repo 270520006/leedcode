@@ -14,20 +14,21 @@ package 第53题_最大子序和;
  //这是我进入动态规划的第一题
 public class Solution {
     public int maxSubArray(int[] nums) {
-        int ans=nums[0],sum=0;
-        for (int num : nums) {
-            if (sum>0){
-                sum+=num;
-            }else {
-                sum=num;
+        int max=nums[0];
+        int sum=0;
+        for (int i = 0; i < nums.length; i++) {
+            if (sum<0){
+                sum=nums[i];
+            }else{
+                sum+=nums[i];
             }
-            ans=Math.max(sum,ans);
+            max=Math.max(max,sum);
         }
-        return ans;
+        return max;
     }
 
     public static void main(String[] args) {
-        int []arr ={-1};
+        int []arr ={-2,1,-3,4,-1,2,1,-5,4};
         Solution solution = new Solution();
         int i = solution.maxSubArray(arr);
         System.out.println(i);
